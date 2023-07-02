@@ -1,0 +1,15 @@
+{
+  "name": "dailycomb",
+  "version": "1.0.0",
+  "description": "WebApplication",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "DailyComb"
+  },
+  "author": "JamesMathews",
+  "license": "ISC"
+}
