@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_73251fbc62ca485f8a19b892314d037f }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_d6ca38770ae540bfbe0dda5734b60f5f }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_2ff9ba37622d4713adcd4d30c63390dc }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_0e3e2e00c2e1463eb94884a767488899 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_73251fbc62ca485f8a19b892314d037f }}/ghost:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_2ff9ba37622d4713adcd4d30c63390dc }}/node:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'DailyComb'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_870f9bd7e2e74ca1814258a963b919e8 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_73251fbc62ca485f8a19b892314d037f }}/ghost:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_68979988c074403fafc53225f4d0e83b }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_2ff9ba37622d4713adcd4d30c63390dc }}/node:${{ github.sha }}'
