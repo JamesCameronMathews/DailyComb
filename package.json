@@ -2,13 +2,13 @@
   "name": "dailycomb",
   "version": "1.0.0",
   "description": "WebApplication",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "test"
-  },
+    "test": "echo \"No tests\""
+  },  
   "repository": {
     "type": "git",
-    "url": "DailyComb"
+    "url": "https://github.com/JamesCameronMathews/DailyComb"
   },
   "author": "JamesMathews",
   "license": "ISC"
